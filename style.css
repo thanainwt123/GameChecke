@@ -1,0 +1,650 @@
+/* ========================================
+   GAME CHECKER
+   DARK BLUE CYBER GAMING THEME
+   สีตัวหนังสือคงเดิมทั้งหมด
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(14, 165, 233, 0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 100% 100%,
+            rgba(30, 64, 175, 0.14),
+            transparent 30%
+        ),
+        #060a12;
+
+    color: #f5f5f5;
+
+    min-height: 100vh;
+}
+
+/* ========================================
+   แสงพื้นหลัง
+   ======================================== */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    top: -180px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 850px;
+    height: 380px;
+
+    background: rgba(14, 165, 233, 0.10);
+
+    filter: blur(115px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+/* ========================================
+   กล่องหลัก
+   ======================================== */
+
+.container {
+    position: relative;
+
+    width: 92%;
+    max-width: 700px;
+
+    margin: 50px auto;
+
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            160deg,
+            #101827,
+            #090e18
+        );
+
+    border: 1px solid #1e3a5f;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.78),
+        0 0 50px rgba(14, 165, 233, 0.05);
+
+    overflow: hidden;
+}
+
+/* ========================================
+   แสงด้านบน
+   ======================================== */
+
+.container::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 10%;
+
+    width: 80%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #0ea5e9,
+            transparent
+        );
+
+    box-shadow:
+        0 0 16px rgba(14, 165, 233, 0.5);
+}
+
+/* ========================================
+   มุมตกแต่ง
+   ======================================== */
+
+.container::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 110px;
+    height: 110px;
+
+    border-right: 2px solid rgba(14, 165, 233, 0.18);
+    border-bottom: 2px solid rgba(14, 165, 233, 0.18);
+
+    border-radius: 0 0 18px 0;
+
+    pointer-events: none;
+}
+
+/* ========================================
+   หัวเว็บ
+   สีตัวหนังสือเดิม
+   ======================================== */
+
+h1 {
+    text-align: center;
+
+    font-size: 42px;
+
+    margin: 0 0 10px;
+
+    color: #38bdf8;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+p {
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 15px;
+}
+
+/* ========================================
+   เส้น
+   ======================================== */
+
+hr {
+    border: none;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #1e3a5f,
+            #0c4a6e,
+            #1e3a5f,
+            transparent
+        );
+
+    margin: 30px 0;
+}
+
+/* ========================================
+   หัวข้อ
+   ======================================== */
+
+h2 {
+    margin-top: 30px;
+
+    margin-bottom: 12px;
+
+    font-size: 20px;
+
+    color: #f1f5f9;
+
+    border-left: 4px solid #0ea5e9;
+
+    padding-left: 12px;
+}
+
+/* ========================================
+   Select
+   ======================================== */
+
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 8px;
+
+    background: #080d16;
+
+    color: #ffffff;
+
+    border: 1px solid #263b55;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.25s;
+
+    cursor: pointer;
+}
+
+select:hover {
+    border-color: #0ea5e9;
+
+    background: #0b1220;
+}
+
+select:focus {
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 0 0 2px rgba(14, 165, 233, 0.15),
+        0 0 18px rgba(14, 165, 233, 0.12);
+}
+
+select option {
+    background: #080d16;
+
+    color: #ffffff;
+}
+
+/* ========================================
+   ช่องค้นหา
+   ======================================== */
+
+#searchGame {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 8px;
+
+    margin-bottom: 10px;
+
+    background: #080d16;
+
+    color: #ffffff;
+
+    border: 1px solid #263b55;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+#searchGame:hover {
+    border-color: #0ea5e9;
+
+    background: #0b1220;
+}
+
+#searchGame:focus {
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 0 0 2px rgba(14, 165, 233, 0.15),
+        0 0 18px rgba(14, 165, 233, 0.12);
+}
+
+#searchGame::placeholder {
+    color: #64748b;
+}
+
+/* ========================================
+   จำนวนเกม
+   ======================================== */
+
+#gameCount {
+    text-align: left;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin: 8px 0 12px;
+}
+
+/* ========================================
+   รายละเอียดเกม
+   ======================================== */
+
+#gameRequirements {
+    position: relative;
+
+    margin-top: 18px;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d1522,
+            #080d15
+        );
+
+    border: 1px solid #1e3a5f;
+
+    border-radius: 12px;
+
+    line-height: 1.8;
+
+    box-shadow:
+        inset 0 0 30px rgba(14, 165, 233, 0.025);
+}
+
+/* แถบฟ้าด้านซ้าย */
+
+#gameRequirements::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 15px;
+
+    width: 3px;
+    height: calc(100% - 30px);
+
+    background: #0ea5e9;
+
+    border-radius: 0 4px 4px 0;
+
+    box-shadow:
+        0 0 12px rgba(14, 165, 233, 0.4);
+}
+
+#gameRequirements h3 {
+    margin-top: 0;
+
+    color: #ffffff;
+
+    font-size: 20px;
+}
+
+/* ========================================
+   ขั้นต่ำ
+   ======================================== */
+
+.requirement-minimum {
+    color: #fb7185;
+}
+
+/* ========================================
+   แนะนำ
+   ======================================== */
+
+.requirement-recommended {
+    color: #4ade80;
+}
+
+/* ========================================
+   ปุ่ม
+   ======================================== */
+
+button {
+    width: 100%;
+
+    padding: 16px;
+
+    margin-top: 10px;
+
+    border: 1px solid #0284c7;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0369a1,
+            #0284c7
+        );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    box-shadow:
+        0 7px 25px rgba(14, 165, 233, 0.20);
+}
+
+button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #0284c7,
+            #0ea5e9
+        );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 32px rgba(14, 165, 233, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   ผลลัพธ์
+   ======================================== */
+
+#result {
+    position: relative;
+
+    margin-top: 25px;
+
+    padding: 22px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d1522,
+            #080d15
+        );
+
+    border: 1px solid #1e3a5f;
+
+    text-align: center;
+
+    line-height: 1.8;
+
+    box-shadow:
+        inset 0 0 30px rgba(14, 165, 233, 0.025);
+}
+
+/* ========================================
+   มือถือ
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+
+        margin: 25px auto;
+
+        padding: 25px 20px;
+
+        border-radius: 14px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    select,
+    #searchGame {
+        padding: 13px;
+    }
+
+    button {
+        padding: 14px;
+    }
+
+    #gameRequirements,
+    #result {
+        padding: 18px;
+    }
+}
+
+/* ========================================
+   สีแบรนด์ CPU / GPU
+   คงเดิม
+   ======================================== */
+
+.brand-intel {
+    color: #38bdf8;
+
+    font-weight: bold;
+}
+
+.brand-amd {
+    color: #ef4444;
+
+    font-weight: bold;
+}
+
+.brand-nvidia {
+    color: #22c55e;
+
+    font-weight: bold;
+}
+
+/* ========================================
+   RAM
+   คงเดิม
+   ======================================== */
+
+.ram-game {
+    color: rgba(255, 255, 255, 0.7);
+
+    font-weight: bold;
+}
+
+.ram-user {
+    color: rgba(255, 255, 255, 0.7);
+
+    font-weight: bold;
+}
+
+/* ========================================
+   CPU / GPU ใกล้เคียงกัน
+   ======================================== */
+
+.similar-specs {
+    margin-top: 25px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    background: #0b111c;
+
+    border: 1px solid #1e3a5f;
+
+    border-radius: 10px;
+}
+
+.similar-title {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #f8f8f8;
+
+    margin-bottom: 8px;
+}
+
+.similar-title span {
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+.gpu-title {
+    margin-top: 20px;
+
+    color: #fffefd;
+}
+
+.similar-text {
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #cbd5e1;
+}
+
+/* ========================================
+   สเปกของผู้ใช้
+   ======================================== */
+
+.your-spec-title {
+    text-align: center;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #f1f5f9;
+
+    margin: 15px 0 10px;
+}
+
+/* ========================================
+   Scrollbar
+   ======================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #060a12;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #263b55;
+
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0ea5e9;
+}
+
+/* ========================================
+   Selection
+   ======================================== */
+
+::selection {
+    background: #0ea5e9;
+
+    color: #ffffff;
+}
